@@ -1,0 +1,64 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int id;
+   string name;
+   int unit;
+   float amount,netpay = 0;
+   int surcharge = 0;
+
+   cout<<"enter the id"<<endl;
+   cin>>id;
+
+   cout<<"enter the name"<<endl;
+   cin>>name;
+
+   cout<<"enter the unit  consumed"<<endl;
+   cin>>unit;
+
+   if(unit<=199){
+
+        amount = unit * 1.20;
+
+   }
+
+   else if(unit>=200 && unit<=400){
+
+
+    amount = unit * 1.50;
+   }
+
+   else if(unit>=400 && unit<=600){
+
+
+    amount = unit * 1.80;
+
+   }
+
+    else if(unit>=600){
+
+        amount = unit * 2.00;
+    }
+
+
+
+      if(amount>300){
+            surcharge = amount*15/100;
+            netpay  = amount+ surcharge;
+
+    }
+    cout<<"NAME OF CONSUMER IS-------->"<<name<<endl;
+    cout<<"ID OF CONSUMER IS----------->"<<id<<endl;
+    cout<<"UNIT CONSUMED BY CONSUMER IS------>"<<unit<<endl;
+    cout<<"TOTAL AMOUNT TO BE PAID IS------>"<<amount<<endl;
+    cout<<"SURCHARGE AMOUNT TO BE PAID IS--------->"<<surcharge<<endl;;
+    cout<<"TOTAL AMOUNT AFTER SURCHARGE TO BE PAID IS--------->"<<netpay<<endl;
+
+    return 0;
+
+
+}
+
